@@ -1,0 +1,36 @@
+{
+    "id": "eldara-paper-doll",
+    "title": "Eldara: Paper Doll Inventory",
+    "description": "Un inventario visual e interactivo para el sistema Custom System Builder.",
+    "version": "1.0.0",
+    "compatibility": {
+        "minimum": "12",
+        "verified": "13"
+    },
+    "authors": [
+        {
+            "name": "Héctor Reyes",
+            "discord": "dantedanny"
+        }
+    ],
+    "relationships": {
+        "systems": [
+            {
+                "id": "custom-system-builder",
+                "type": "system",
+                "compatibility": {
+                    "verified": "5.2.1"
+                }
+            }
+        ]
+    },
+    "esmodules": [
+        "paper-doll.js"
+    ],
+    "styles": [
+        "paper-doll.css"
+    ],
+    "url": "https://github.com/HectorReyes000/eldara-paper-doll",
+    "manifest": "https://raw.githubusercontent.com/HectorReyes000/eldara-paper-doll/main/module.json",
+    "download": "https://github.com/HectorReyes000/eldara-paper-doll/releases/latest/download/module.zip"
+}

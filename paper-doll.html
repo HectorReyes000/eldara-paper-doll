@@ -1,0 +1,22 @@
+<div class="eldara-paper-doll-container">
+    <div class="doll-silhouette"></div>
+
+    {{#each slotConfig as |slot|}}
+    {{#if slot.isTwoHandedPlaceholder}}
+    <div class="item-slot slot-{{slot.id}}" data-slot-id="{{slot.id}}"
+        data-tooltip="{{slot.placeholderName}} (2 Manos)">
+        <img src="{{slot.placeholderImg}}" alt="{{slot.placeholderName}}" class="item-icon two-handed-placeholder">
+    </div>
+    {{else}}
+    {{#with (lookup ../slots slot.id) as |item|}}
+    <div class="item-slot slot-{{slot.id}}" data-slot-id="{{slot.id}}" data-tooltip="{{item.name}}">
+        <img src="{{item.img}}" alt="{{item.name}}" class="item-icon">
+    </div>
+    {{else}}
+    <div class="item-slot slot-{{slot.id}}" data-slot-id="{{slot.id}}" data-tooltip="{{slot.name}}">
+        <span class="empty-slot-label">{{slot.name}}</span>
+    </div>
+    {{/with}}
+    {{/if}}
+    {{/each}}
+</div>
